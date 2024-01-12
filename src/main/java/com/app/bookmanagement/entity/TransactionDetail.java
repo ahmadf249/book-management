@@ -17,4 +17,44 @@ public class TransactionDetail implements Serializable {
     private Book bookId;
     private Integer quantity;
     private double subTotal;
+
+    public Integer getTransactionDetailsId() {
+        return transactionDetailsId;
+    }
+
+    public void setTransactionDetailsId(Integer transactionDetailsId) {
+        this.transactionDetailsId = transactionDetailsId;
+    }
+
+    public Transaction getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(Transaction transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public Book getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(Book bookId) {
+        this.bookId = bookId;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getSubTotal() {
+        return subTotal;
+    }
+
+    public void setSubTotal(double subTotal) {
+        this.subTotal = subTotal;
+    }
 }
