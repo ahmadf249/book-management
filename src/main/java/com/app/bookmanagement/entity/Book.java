@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Table(name = "book")
     public class Book implements Serializable {
     public Integer getBookId() {
         return bookId;
@@ -94,5 +95,20 @@ import java.util.Date;
     @ManyToOne
     @JoinColumn (name = "authorId")
     private Author authorId;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookId=" + bookId +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", publishedDate=" + publishedDate +
+                ", categoryId=" + categoryId +
+                ", authorId=" + authorId +
+                '}';
     }
+}
 

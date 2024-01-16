@@ -3,7 +3,8 @@ package com.app.bookmanagement.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-
+@Entity
+@Table(name = "category")
 public class Category implements Serializable {
     public Integer getCategoryId() {
         return categoryId;

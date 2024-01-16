@@ -3,7 +3,8 @@ package com.app.bookmanagement.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-
+@Entity
+@Table(name = "transactionDetail")
 public class TransactionDetail implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Table(name = "author")
 public class Author implements Serializable{
     public Integer getAuthorId() {
         return authorId;
