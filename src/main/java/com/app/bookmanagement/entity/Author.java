@@ -55,4 +55,23 @@ public class Author implements Serializable{
     private String lastName;
     private Date birthDate;
     private String bio;
+
+    public Author(Integer authorId, String firstName, String lastName, Date birthDate, String bio) {
+        this.authorId = authorId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.bio = bio;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorId=" + authorId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                ", bio='" + bio + '\'' +
+                '}';
+    }
 }

@@ -17,32 +17,36 @@ public class BookController {
     @Autowired
     private BookService service;
 
-    @GetMapping("/book")
+    public BookController(BookService service) {
+        this.service = service;
+    }
+
+    @GetMapping(value = "/book")
     public ResponseEntity<List<Book>> getAllBooks(){
         return ResponseEntity.ok(service.getBookList());
     }
 
-    @GetMapping("/book/{id}")
+    @GetMapping(value = "/book/{id}")
     public ResponseEntity<Optional<Book>> getBookById(@PathVariable int bookId) {
         return ResponseEntity.ok().body(this.service.getBookById(bookId));
     }
 
-    @PostMapping("/book")
+    @PostMapping(value = "/book")
     public ResponseEntity<Book> createBook(@RequestBody Book book) {
         return ResponseEntity.ok(this.service.createBook(book));
     }
 
-    @PostMapping("/book")
+    @PostMapping(value = "/books")
     public ResponseEntity<List<Book>> createBookList(@RequestBody List<Book> list) {
         return ResponseEntity.ok(this.service.createBookList(list));
     }
 
-    @PutMapping("/book/")
+    @PutMapping(value = "/book/")
     public ResponseEntity<Book> updateUser(@RequestBody Book book) {
         return ResponseEntity.ok().body(this.service.updateBookById(book));
     }
 
-    @DeleteMapping("/book/{id}")
+    @DeleteMapping(value = "/book/{id}")
     public HttpStatus deleteBookById(@PathVariable int id) {
         this.service.deleteBookById(id);
         return HttpStatus.OK;

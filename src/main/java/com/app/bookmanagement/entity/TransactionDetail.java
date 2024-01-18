@@ -58,4 +58,23 @@ public class TransactionDetail implements Serializable {
     public void setSubTotal(double subTotal) {
         this.subTotal = subTotal;
     }
+
+    public TransactionDetail(Integer transactionDetailsId, Transaction transactionId, Book bookId, Integer quantity, double subTotal) {
+        this.transactionDetailsId = transactionDetailsId;
+        this.transactionId = transactionId;
+        this.bookId = bookId;
+        this.quantity = quantity;
+        this.subTotal = subTotal;
+    }
+
+    @Override
+    public String toString() {
+        return "TransactionDetail{" +
+                "transactionDetailsId=" + transactionDetailsId +
+                ", transactionId=" + transactionId +
+                ", bookId=" + bookId +
+                ", quantity=" + quantity +
+                ", subTotal=" + subTotal +
+                '}';
+    }
 }

@@ -110,5 +110,17 @@ import java.util.Date;
                 ", authorId=" + authorId +
                 '}';
     }
+
+    public Book(Integer bookId, String title, String isbn, String description, Double price, Integer quantity, Date publishedDate, Category categoryId, Author authorId) {
+        this.bookId = bookId;
+        this.title = title;
+        this.isbn = isbn;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.publishedDate = publishedDate;
+        this.categoryId = categoryId;
+        this.authorId = authorId;
+    }
 }
 

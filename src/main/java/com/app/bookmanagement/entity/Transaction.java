@@ -48,4 +48,20 @@ public class Transaction implements Serializable {
         this.totalAmount = totalAmount;
     }
 
+    public Transaction(Integer transactionId, User userId, Date transactionDate, double totalAmount) {
+        this.transactionId = transactionId;
+        this.userId = userId;
+        this.transactionDate = transactionDate;
+        this.totalAmount = totalAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId=" + transactionId +
+                ", userId=" + userId +
+                ", transactionDate=" + transactionDate +
+                ", totalAmount=" + totalAmount +
+                '}';
+    }
 }
