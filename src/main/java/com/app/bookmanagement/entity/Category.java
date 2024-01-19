@@ -40,4 +40,8 @@ public class Category implements Serializable {
                 ", categoryName='" + categoryName + '\'' +
                 '}';
     }
+
+    public Category(){
+
+    }
 }

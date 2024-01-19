@@ -74,4 +74,8 @@ public class Author implements Serializable{
                 ", bio='" + bio + '\'' +
                 '}';
     }
+
+    public Author(){
+
+    }
 }

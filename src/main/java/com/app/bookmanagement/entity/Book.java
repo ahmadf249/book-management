@@ -122,5 +122,9 @@ import java.util.Date;
         this.categoryId = categoryId;
         this.authorId = authorId;
     }
+
+    public Book(){
+
+    }
 }
 
